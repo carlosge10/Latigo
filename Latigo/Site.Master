@@ -68,9 +68,9 @@
             <div class="body-content">
                 <div class="row content">
                     <div class="col-sm-2 sidenav" style="background-color:lightgray">
-                      <p><a href="#">Nueva Solicitud</a></p>
-                      <p><a href="#">Mis Solicitudes</a></p>
-                      <p><a href="#">Catalogos</a></p>
+                      <p><a href="../Pagina/frmNuevaSolicitud.aspx">Nueva Solicitud</a></p>
+                      <p><a href="../Pagina/frmMisSolicitudes.aspx">Mis Solicitudes</a></p>
+                      <p><a href="../Pagina/frmCatalogos.aspx">Catalogos</a></p>
                       <p><a href="#">...</a></p>
                     </div>
                     <div class="col-sm-8 text-left">

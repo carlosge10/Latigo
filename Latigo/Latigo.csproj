@@ -150,7 +150,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Pagina\frmCatalogos.aspx" />
     <Content Include="Pagina\frmMisSolicitudes.aspx" />
-    <Content Include="Pagina\frmServicio.aspx" />
+    <Content Include="Pagina\frmNuevaSolicitud.aspx" />
     <Content Include="Pagina\frmUsuarios.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -234,12 +234,12 @@
     <Compile Include="Pagina\frmMisSolicitudes.aspx.designer.cs">
       <DependentUpon>frmMisSolicitudes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pagina\frmServicio.aspx.cs">
-      <DependentUpon>frmServicio.aspx</DependentUpon>
+    <Compile Include="Pagina\frmNuevaSolicitud.aspx.cs">
+      <DependentUpon>frmNuevaSolicitud.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pagina\frmServicio.aspx.designer.cs">
-      <DependentUpon>frmServicio.aspx</DependentUpon>
+    <Compile Include="Pagina\frmNuevaSolicitud.aspx.designer.cs">
+      <DependentUpon>frmNuevaSolicitud.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pagina\frmUsuarios.aspx.cs">
       <DependentUpon>frmUsuarios.aspx</DependentUpon>
