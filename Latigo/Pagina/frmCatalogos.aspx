@@ -222,6 +222,12 @@
                     <td>
                         <table>
                             <tr>
+                                <td>
+                                    <asp:DropDownList runat="server" ID="ddlServices" DataSourceID="SDS_Services" DataTextField="Nombre" DataValueField="Id" Width="123px"></asp:DropDownList>
+                                    <asp:SqlDataSource ID="SDS_Services" runat="server" ConnectionString="<%$ ConnectionStrings:LatigoConnectionString %>" SelectCommand="SELECT [Id], [Nombre] FROM [Servicio]"></asp:SqlDataSource>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td><asp:TextBox runat="server" ID="tbProveedorNombre" placeholder="Nombre"></asp:TextBox></td> <td><asp:TextBox runat="server" ID="tbProveedorEmail" placeholder="Email"></asp:TextBox></td> <td><asp:TextBox runat="server" ID="tbProveedorWhatsapp" placeholder="Whatsapp"></asp:TextBox></td> <td><asp:TextBox runat="server" ID="tbProveedorSMS" placeholder="SMS"></asp:TextBox></td> <td><asp:TextBox runat="server" ID="tbProveedorSlack" placeholder="Slack"></asp:TextBox></td><td><asp:CheckBox runat="server" ID="chbProveedorPrincipal" Text="Proveedor Principal"/></td><td><asp:Button runat="server" ID="btnProveedorAgregar" Text="Agregar" OnClick="btnProveedorAgregar_Click"/></td>
                             </tr>
                             <tr>

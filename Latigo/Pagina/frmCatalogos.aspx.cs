@@ -129,7 +129,7 @@ namespace Latigo.Pagina
             TipoServicio l = (from ren in db.TipoServicio
                        where ren.Id == idTipoServicio
                        select ren).First();
-            tbLugarNombre.Text = l.Nombre;
+            tbTipoNombre.Text = l.Nombre;
 
             hfIDTipoServicio.Value = idTipoServicio.ToString();
         }
@@ -160,7 +160,7 @@ namespace Latigo.Pagina
                     {
                         if (tbTipoNombre.Text != "")
                         {
-                            registro.Nombre = tbLugarNombre.Text;
+                            registro.Nombre = tbTipoNombre.Text;
 
                             db.SubmitChanges();
                             gvTiposServicio.DataBind();
@@ -206,8 +206,10 @@ namespace Latigo.Pagina
             Servicio l = (from ren in db.Servicio
                               where ren.Id == idServicio
                               select ren).First();
+
             tbServicioNombre.Text = l.Nombre;
             tbServicioDescripcion.Text = l.Descripcion;
+            ddlTipoServicio.SelectedIndex = ddlTipoServicio.Items.IndexOf(ddlTipoServicio.Items.FindByValue(l.IdTipo.ToString()));
 
             hfIdServicio.Value = idServicio.ToString();
         }
@@ -274,6 +276,8 @@ namespace Latigo.Pagina
             SDSProveedor.SelectCommand = "SELECT ID, Nombre, Email, Whatsapp, SMS, Slack FROM Latigo.dbo.Proveedor P LEFT JOIN ServicioProveedor SP ON SP.IDProveedor = P.Id WHERE SP.IDServicio = "+ idServicio.ToString() +" ORDER BY P.Nombre DESC";
 
             gvProveedores.DataBind();
+
+            ddlServices.SelectedIndex = ddlServices.Items.IndexOf(ddlServices.Items.FindByValue(hfIdServicio.Value));
         }
         protected void btnProveedorAgregar_Click(object sender, EventArgs e)
         {
@@ -321,7 +325,21 @@ namespace Latigo.Pagina
         }
 
         protected void modificarProveedor(object sender, EventArgs e) {
+            btnProveedorAgregar.Text = "Guardar";
 
+            LinkButton boton = (LinkButton)sender;
+            Int32 idServicio = Convert.ToInt32(boton.CommandArgument);
+
+            DataClasses1DataContext db = new DataClasses1DataContext();
+            Servicio l = (from ren in db.Servicio
+                          where ren.Id == idServicio
+                          select ren).First();
+
+            tbServicioNombre.Text = l.Nombre;
+            tbServicioDescripcion.Text = l.Descripcion;
+            ddlTipoServicio.SelectedIndex = ddlTipoServicio.Items.IndexOf(ddlTipoServicio.Items.FindByValue(l.IdTipo.ToString()));
+
+            hfIdServicio.Value = idServicio.ToString();
         }
         /*PROVEEDORES>*/
     }

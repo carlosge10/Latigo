@@ -265,6 +265,24 @@ namespace Latigo.Pagina {
         protected global::System.Web.UI.WebControls.Label lblProveedorMsg;
         
         /// <summary>
+        /// Control ddlServices.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlServices;
+        
+        /// <summary>
+        /// Control SDS_Services.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SDS_Services;
+        
+        /// <summary>
         /// Control tbProveedorNombre.
         /// </summary>
         /// <remarks>
